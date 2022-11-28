@@ -14,20 +14,20 @@ export default function BakeryItem(props) {
     }
 
     
-
     return(
-        
         <div ClassName = "bakeryItem">
-            <img src={props.item.image} height="250" width="250"/>
+            <img src={props.item.image} height="250" width="350"/>
             <p></p>
             <h3> {props.item.name} </h3>
-            {props.item.description}
+            {props.item.warm && "Warm"} {props.item.cold && "Cold"}
+            <p></p>
+            {props.item.type}
             <p></p>
             {props.item.price}
             <p></p>
             <button onClick = {handleClick}> Add to Cart </button>
+            <p></p>
             
-
         </div>
     );
 }
