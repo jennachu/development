@@ -10,12 +10,12 @@ export default function BakeryItem(props) {
     const handleClick = () => {
         console.log(`clicked ${item.name}`)
         // make a function for update cart
-        updateCart([...cart, item]);
+        updateCart(item);
     }
 
     
     return(
-        <div ClassName = "bakeryItem">
+        <div className = "bakeryItem">
             <img src={props.item.image} height="250" width="350"/>
             <p></p>
             <h3> {props.item.name} </h3>
