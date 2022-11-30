@@ -32,7 +32,7 @@
     "image": "images/churro.jpeg"
   },
   {
-    "name": "Cold Brew with Vanilla Sweet Cream",
+    "name": "Cold Brew with Sweet Cream",
     "price": 4.89,
     "warm": false,
     "cold": true,
@@ -72,7 +72,7 @@
     "image": "images/macaron.jpeg"
   },
   {
-    "name": "Milk Tea with Brown Sugar Boba",
+    "name": "Milk Tea with Boba",
     "price": 5.99,
     "warm": false,
     "cold": true,
@@ -88,7 +88,7 @@
     "image": "images/lava-cake.jpeg"
   },
   {
-    "name": "Slide of Apple Pie",
+    "name": "Slice of Apple Pie",
     "price": 4.59,
     "warm": true,
     "cold": false,

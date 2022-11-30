@@ -6,6 +6,7 @@ import BakeryItem from "./components/BakeryItem";
 import CartItem from "./components/CartItem";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 
 
@@ -182,28 +183,49 @@ function App() {
   return (
     <div className="App">
       <div center>
-      <h1>Serendipity Sweets Shop</h1> 
+      <h1>🍭 Serendipity Sweets Shop 🍭</h1> 
       <h4>One stop shop for anything sweet</h4>
 
-      <div buttons>
+      {/* <div buttons>
       <button onClick={() => handleSortAscending()}>Price Low to High</button> 
       <button onClick={() => handleSortDescending()}>Price High to Low</button> 
       <button onClick={() => resetSort()}>Reset Price Sort</button> 
-      </div>
-      </div>
+      </div> */}
 
+      <Navbar className="justify-content-center">
+        Sort by Price: 
+          <Nav defaultActiveKey="0">
+            <NavDropdown title="Dropdown">
+              <NavDropdown.Item>
+                <Nav.Link eventKey="Select a sort order" onClick={() => resetSort()}>
+                  No Sort
+                </Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link eventKey="Lowest to Highest" onClick={() => handleSortAscending()}>
+                  Lowest to Highest
+                </Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link eventKey="Highest to Lowest" onClick={() => handleSortDescending()}>
+                  Highest to Lowest
+                </Nav.Link>
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar>
 
-      <div className = "filterOptions">
-      <Navbar>
+      
+      <Navbar className="justify-content-center">
         Temperature: 
-      <Nav defaultActiveKey="All" onSelect={selectFilter1}>
+      <Nav defaultActiveKey="All" onSelect={selectFilter1 }>
         <Nav.Item><Nav.Link eventKey="All">All</Nav.Link></Nav.Item>
         <Nav.Item><Nav.Link eventKey="Warm">Warm</Nav.Link></Nav.Item>
         <Nav.Item><Nav.Link eventKey="Cold">Cold</Nav.Link></Nav.Item>
       </Nav>
       </Navbar>
 
-      <Navbar>
+      <Navbar className="justify-content-center">
         Type: 
         <Nav defaultActiveKey="All" onSelect={selectFilter2}>
           <Nav.Item><Nav.Link eventKey="All">All</Nav.Link></Nav.Item>
@@ -213,8 +235,9 @@ function App() {
       </Navbar>
       </div>
 
+
       <div className = "items">
-        <div clas = "item"> 
+        <div class = "item"> 
         {computedArrayFilteredAndSorted().map((item, index) => ( // TODO: map bakeryData to BakeryItem components
           <BakeryItem key={item.name} item={item} cart={cart} updateCart={updateCart}/>
           //<p>Bakery Item {index}</p> // replace with BakeryItem component
@@ -223,7 +246,7 @@ function App() {
       </div>
 
       <div className="cart">
-        <h2>Cart</h2>
+        <h2> 🛒 Cart</h2>
         {/* cart.map((obj) => {
           return <CartItem key={obj.name} name={obj.name} price={obj.price} count={obj.itemCount}/>
         }) */}

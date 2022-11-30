@@ -5,11 +5,10 @@ export default function displayCartItem(prop) {
     return (
         <div className= "add_to_cart">
             <div className="cart_text">
-                <h4>{prop.name}</h4>
-                <h4>${prop.price}</h4>  
+                <h5>{prop.name}</h5>
+                <h5>${prop.price}</h5>  
             </div>
             <div className="cart_text">
-                <img className = "small_img" src={prop.img}/> 
                 <div className="cart_items">
                     <button className="cart_button item_count" onClick={() => prop.removeItem(prop.name)}>-</button>
                     <p className="item_count">{prop.count}</p>

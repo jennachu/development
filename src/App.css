@@ -1,6 +1,12 @@
 .App {
   text-align: center;
+  background-color: #faedfd;
 }
+
+html, body {
+  background-color: #faedfd;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -37,11 +43,43 @@
   }
 }
 
+.item{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.bakeryItem{
+  padding: 20px;
+}
 
+.h3{
+  inline-size: 150px; 
+}
 
 .items{
   float: left;
-  width: 80%;
+  width: 70%;
+  justify-content: center;
 }
 
+.filterOptions{
+  justify-content: center;
+}
+
+.cart_items{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.item_count{
+  justify-content: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.cart{
+  height: 100%
+}
